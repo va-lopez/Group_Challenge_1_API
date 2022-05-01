@@ -1,0 +1,76 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    
+    <title>Simple caprese salad</title>
+</head>
+
+<body>
+    <!-- header or title of recipes along with info-->
+    <header>
+        <section>
+            <h2 id="title"></h2>
+        </section>
+        <section id="info">
+            <p></p>
+        </section>
+    </header>
+
+    <!--ingredients and steps-->
+    <article>
+        <section>
+            <h3>Ingredients</h3>
+            <p>Serving size</p>
+            <button class="btn btn-primary" id="fetch-button">Get Ingredients</button>
+            <ul id="ingredients">
+            </ul>
+        </section>
+        <section>
+            <h3>Preparation</h3>
+            <ul id="preparation">
+            </ul>
+        </section>
+    </article>
+
+    <!--footer information-->
+    <footer>
+        <section>
+            <h3>Leave a review!</h3>
+            <form>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" />
+                </div>
+                <div>
+                    <label for="review">Review:</label>
+                    <textarea id="review" cols="60" rows="5"></textarea>
+                </div>
+            </form>
+        </section>
+        <section>
+            <h3>Reviews</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>techie4good@adventure-works.com</td>
+                        <td>Loved it!!</td>
+                    </tr>
+                    <tr>
+                        <input email address for review>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </footer>
+    <script src ="./assets/js/script.js"></script>
+</body>
+
+</html>

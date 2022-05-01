@@ -1,15 +1,19 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title>Simple caprese salad</title>
 </head>
 
 <body>
     <header>
         <section>
-            <h2>Simple caprese salad</h2>
+            <div class="title">
+                <h2>Simple Caprese Salad</h2>
+            </div>
             <p>A spin on the standard <a href="https://en.wikipedia.org/wiki/Caprese_salad">caprese salad</a>.</p>
         </section>
+
         <section>
             <p>Traditionally, the caprese salad calls for sliced tomatoes and slices of mozzarella. This version uses cherry
                 tomatoes, and either mozzarella balls or small cubes of the cheese. This gives you a salad that's a bit more
@@ -18,6 +22,7 @@
             <p>The recipe below is designed to act as a guide, and not something to be followed prescriptively. Play with your
                 food! Adjust amounts based on your tastes.</p>
         </section>
+
     </header>
     <article>
         <section id="ingredients">
@@ -45,40 +50,54 @@
             </ul>
         </section>
     </article>
+
     <footer>
-        <section>
-            <h3>Leave a review!</h3>
-            <form>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" />
+        <!-- VALERIE API MAP SECTION STARTS HERE-->
+        <!--Section with a map and list of results of grocery stores nearby-->
+        <section id = "mapAndResults">
+             <!---HTML Element to hold map -->
+             <div id="googleMap"></div>
+            
+            <!--Create a form for the map. User will enter in their zipcode and 
+            grocery stores nearby will appear.-->
+            <div id = "location-container">
+                <form id = "search-nearby">
+                    <label 
+                        class = "form-location" 
+                        class = "form-entry"
+                        for = "zipCode">
+                        Enter Address 
+                    </label>
+
+                    <input 
+                        name = "zipCode"
+                        class = "form-entry"
+                        id = "zipCode"
+                        type = "text"
+                        autofocus = "true"
+                        class = "form-input"
+                        style = "text-align:center">
+
+                    <button 
+                        type = "submit" 
+                        class = "form-entry"
+                        id = "submitBtn">
+                        Search Nearby
+                    </button>
+                </form>
+
+                <!--The locations pulled by the google maps API will appear and append here-->
+                <div class = "results">
+                    <h4 class = "mapText">Showing grocery stores nearby.</h4>
+                    <!--This container will hold the list of places-->
+                    <div id = "locations-list" class = "list-group"></div>
                 </div>
-                <div>
-                    <label for="review">Review:</label>
-                    <textarea id="review" cols="60" rows="5"></textarea>
-                </div>
-            </form>
+            </div>
+            
+            <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBieEzGl9RhFYgLWAcRI7BtGLU1_Z264-A&libraries=places&callback=myMap"></script>
+            <script src = "./assets/js/script.js"></script>;
         </section>
-        <section>
-            <h3>Reviews</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Email</th>
-                        <th>Review</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>techie4good@adventure-works.com</td>
-                        <td>Loved it!!</td>
-                    </tr>
-                    <tr>
-                        <input email address for review>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <!-- VALERIE API MAP SECTION ENDS HERE-->
     </footer>
 </body>
 
